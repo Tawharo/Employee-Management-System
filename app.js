@@ -1,80 +1,72 @@
 // dependencies
 const mysql = require("mysql");
 const inquirer = require("inquirer");
+const cTable = require("console.table");
 
 // create the connection information for the sql database
 const connection = mysql.createConnection({
     host: "localhost",
-
     port: 3306,
-
     user: "root",
-
     password: "",
     database: "employee_trackerDB"
 });
 
 // connect to the mysql server and sql database
-connection.connect(err => {
+connection.connect(function (err) {
     if (err) throw err;
-    console.log("connected as id " + connection.threadId);
-      // run the start function after the connection is made to prompt the user
-    start();
+    console.log("Connected to employee_trackerDB!");
+
+    runEmployeetracker();
 });
 
-// function which prompts the user for what action they should take
-function start() {
+function runEmployeetracker() {
     inquirer
         .prompt({
             name: "action",
             type: "list",
             message: "What would you like to do?",
             choices: [
-                "Add department",
-                "Add role",
-                "Add employee",
-                "View departments",
-                "View roles",
-                "View employees",
-                "Update employee role",
-                "Delete employee",
+                "Add Department",
+                "Add Role",
+                "Add Employee",
+                "View Departments",
+                "View Roles",
+                "View Employees",
+                "Update Employee Role",
+                "Delete Employee",
                 "EXIT"
             ]
         }).then(function (answer) {
-              // Use the switch statement to select one of many code blocks to be executed.
-    // The switch statement evaluates an expression, matching the expression's value 
-    // to a case clause, and executes statements associated with that case, 
-    // as well as statements in cases that follow the matching case
             switch (answer.action) {
-                case "Add department":
+                case "Add Department":
                     addDepartment();
                     break;
-                case "Add role":
+                case "Add Role":
                     addRole();
                     break;
-                case "Add employee":
+                case "Add Employee":
                     addEmployee();
                     break;
-                case "View departments":
+                case "View Departments":
                     viewDepartments();
                     break;
-                case "View roles":
+                case "View Roles":
                     viewRoles();
                     break;
-                case "View employees":
+                case "View Employees":
                     viewEmployees();
                     break;
-                case "Update employee role":
+                case "Update Employee Role":
                     updateRoles();
                     break;
-                case "Delete employee":
+                case "Delete Employee":
                     deleteEmployee();
                 case "EXIT":
                     connection.end();
                     break;
             }
         })
-
 }
 
 function addDepartment() {

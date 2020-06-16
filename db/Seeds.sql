@@ -34,22 +34,22 @@ INSERT INTO employee (first_name, last_name, role_id)
 VALUES ("Tawheed", "Haroon", 1);
 
 INSERT INTO employee (first_name, last_name, role_id)
-VALUES ("Tawheed", "Haroon", 1);
+VALUES ("Emma", "Wiggle", 2);
 
 INSERT INTO employee (first_name, last_name, role_id)
-VALUES ("Tawheed", "Haroon", 1);
+VALUES ("Eden", "Claire", 1);
 
 INSERT INTO employee (first_name, last_name, role_id)
-VALUES ("Tawheed", "Haroon", 1);
+VALUES ("John", "Park", 4);
 
 INSERT INTO employee (first_name, last_name, role_id)
-VALUES ("Tawheed", "Haroon", 1);
+VALUES ("Kamal", "Islam", 3);
 
 INSERT INTO employee (first_name, last_name, role_id)
-VALUES ("Tawheed", "Haroon", 1);
+VALUES ("Valerie", "Putnam", 5);
 
 INSERT INTO employee (first_name, last_name, role_id)
-VALUES ("Tawheed", "Haroon", 1);
+VALUES ("Thor", "VonDerbeek", 6);
 
 INSERT INTO employee (first_name, last_name, role_id)
-VALUES ("Tawheed", "Haroon", 1);
+VALUES ("Carlota", "Thompson", 7);
