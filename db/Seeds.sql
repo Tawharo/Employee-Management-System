@@ -6,28 +6,28 @@ VALUES ("Sales"), ("Accounting"), ("Management"), ("Human Resources");
 
 /* roles */
 INSERT INTO role (title, salary, department_id)
-VALUES ("Salesman", 75000, 1);
+VALUES ("Sales Lead", 75000, 1);
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("Salesman", 75000, 1);
+VALUES ("Associate Accountant", 45000, 2);
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("Salesman", 75000, 1);
+VALUES ("Assistant Accountant", 55000, 2);
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("Salesman", 75000, 1);
+VALUES ("Senior Accountant", 75000, 2);
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("Salesman", 75000, 1);
+VALUES ("General Manager", 95000, 3);
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("Salesman", 75000, 1);
+VALUES ("Human Resources Assistant", 50000, 4);
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("Salesman", 75000, 1);
+VALUES ("Human Resources Manager", 75000, 4);
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("Salesman", 75000, 1);
+VALUES ("Salesman", 65000, 1);
 
 /* employees */
 INSERT INTO employee (first_name, last_name, role_id)
